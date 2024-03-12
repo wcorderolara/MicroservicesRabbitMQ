@@ -8,7 +8,7 @@ using MicroRabbit.Domain.Core.Events;
 
 namespace MicroRabbit.Domain.Core.Bus
 {
-    internal interface IEventBus
+    public interface IEventBus
     {
         Task SendCommand<T>(T command) where T: Command;
         void Publish<T>(T @event) where T : Event;
